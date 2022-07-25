@@ -1,0 +1,40 @@
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+.list-element {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 200px;
+}
+
+.list-element-name {
+	font-weight: bold;
+}
+
+.list-element-del-button {
+	background-color: red;
+	padding: 5px 10px;
+	aspect-ratio: 1;
+	height: auto;
+	width: auto;
+	border-radius: 50%;
+	border: none;
+	color: #EEE;
+	font-weight: bold;
+}
+
+.cliquable:hover {
+	transform: scale(1.05);
+}
+
+.cliquable:active {
+	transform: scale(0.9);
+}
+
+#elements-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
