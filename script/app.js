@@ -2,6 +2,7 @@
 const input = document.querySelector('#element-name');
 const list = document.querySelector('#elements-list');
 const generateButton = document.querySelector('#generate-button');
+const bingoGrid = document.querySelector('#bingo-grid');
 
 // Variables globales
 let bingoElements = [];
@@ -59,5 +60,18 @@ function addElement (element)
 
 function generateGrid ()
 {
+	let localElements = JSON.parse(JSON.stringify(bingoElements));
+	let resultElements = [];
+
+	let y = Math.floor(bingoElements.length ** 0.5);
+	let x = Math.floor(bingoElements.length / y);
+	console.log(bingoElements.length, x, y);
+
+	for (var i = 0; i < x * y; i++) {
+		let index = Math.floor(Math.random()*localElements.length);
+		resultElements.push(localElements.pop(index));
+		console.log("local :", localElements);
+	}
+	console.log("result :", resultElements);
 
 }

@@ -38,3 +38,7 @@ body {
 	flex-direction: column;
 	gap: 10px;
 }
+
+#bingo-grid {
+	display: grid;
+}
