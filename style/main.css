@@ -42,3 +42,8 @@ body {
 #bingo-grid {
 	display: grid;
 }
+
+.grid-element {
+	border: 2px dotted red;
+	width: 100%;
+}
