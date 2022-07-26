@@ -1,16 +1,76 @@
 body {
 	font-family: Helvetica, sans-serif;
+	margin: 0;
+}
+
+button {
+	padding: 5px 10px;
+	border: none;
+	border-radius: 25px;
+	margin: 5px;
+	font-weight: bold;
+	font-size: min(3vh, 3vw);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+label {
+	font-size: min(3vh, 3vw);
+}
+
+section {
+	height: 100vh;
+}
+
+.cliquable:active {
+	transform: scale(0.9);
+}
+
+.cliquable:hover {
+	transform: scale(1.05);
+}
+
+.dark-mode .grid-element {
+	background-color: darkslateblue;
+}
+
+.dark-mode .grid-element-active {
+	background-color: mediumaquamarine;
+} 
+
+.dark-mode {
+	background-color: #1D1D1D;
+	color: #EEE;
+}
+
+.grid-element {
+	width: 100%;
+	text-align: center;
+	background-color: lightcyan;
+	border-radius: 5px;
+	box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.75);
+	transition: ease-in-out 0.05s;
+	font-size: min(5vh, 5vw);
+}
+
+.grid-element-active {
+	background-color: lime;
+}
+
+.grid-element:active {
+	transform: scale(0.97);
+	box-shadow: none;
+	box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.75);
 }
 
 .list-element {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 200px;
-}
-
-.list-element-name {
-	font-weight: bold;
+	font-size: min(3vh, 3vw);
+	width: 300px;
 }
 
 .list-element-del-button {
@@ -25,25 +85,86 @@ body {
 	font-weight: bold;
 }
 
-.cliquable:hover {
-	transform: scale(1.05);
+.list-element-name {
+	font-weight: bold;
 }
 
-.cliquable:active {
-	transform: scale(0.9);
+#bingo-grid {
+	display: grid;
+	gap: 15px;
+	height: 80%;
+	width: 80%;
+}
+
+#bingo-grid-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#bingo-inputs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 15px;
+}
+
+#bingo-settings {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	height: 100vh;
+	padding: 25px;
+}
+
+#clean-button {
+	color: #EEE;
+	background-color: red;
+}
+
+#clean-warn {
+	background-color: orange;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	height: 80%;
+	width: 80%;
+	margin: 0 10%;
+	display: none;
+}
+
+#dark-toggle {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	background-color: slategrey;
+	color: white;
+	border-radius: 25px;
+	display: flex;
+	align-items: center;
+}
+
+#element-name {
+	font-size: min(3vh, 3vw);
+	border-radius: 25px;
+	padding: 5px 10px;
 }
 
 #elements-list {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
 	gap: 10px;
-}
-
-#bingo-grid {
-	display: grid;
-}
-
-.grid-element {
-	border: 2px dotted red;
+	max-height: 80vh;
+	overflow: auto;
 	width: 100%;
+}
+
+#generate-button {
+	background-color: lime;	
 }
