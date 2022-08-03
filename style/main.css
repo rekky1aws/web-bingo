@@ -1,6 +1,7 @@
 body {
 	font-family: Helvetica, sans-serif;
 	margin: 0;
+	overflow: hidden;
 }
 
 button {
@@ -38,7 +39,11 @@ section {
 
 .dark-mode .grid-element-active {
 	background-color: mediumaquamarine;
-} 
+}
+
+.dark-mode .top-button {
+	background-color: cornflowerblue;
+}
 
 .dark-mode {
 	background-color: #1D1D1D;
@@ -170,7 +175,7 @@ section {
 }
 
 .top-button {
-	background-color: cornflowerblue;
+	background-color: darkslateblue;
 	text-decoration: none;
 	color: #EEE;
 	font-weight: bold;
