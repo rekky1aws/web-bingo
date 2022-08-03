@@ -168,3 +168,24 @@ section {
 #generate-button {
 	background-color: lime;	
 }
+
+.top-button {
+	background-color: cornflowerblue;
+	text-decoration: none;
+	color: #EEE;
+	font-weight: bold;
+	aspect-ratio: 1;
+	height:  auto;
+	width: 30px;
+	border-radius: 25px;
+	font-size: 30px;
+	display: block;
+	visibility: hidden;
+	text-align: center;
+	position: fixed;
+	margin: 25px;
+	top: 25px;
+	left: 25px;
+	transition: ease-in-out 0.3s;
+	opacity: 0;
+}

@@ -5,6 +5,7 @@ const generateButton = document.querySelector('#generate-button');
 const cleanButton = document.querySelector('#clean-button');
 const bingoGrid = document.querySelector('#bingo-grid');
 const darkToggle = document.querySelector('#dark-toggle');
+const topButton = document.querySelector('.top-button');
 
 // Variables globales
 let bingoElements = [];
@@ -15,6 +16,7 @@ input.addEventListener('keyup', switchKey);
 generateButton.addEventListener('click', generateGrid);
 cleanButton.addEventListener('click', cleanAll);
 darkToggle.addEventListener('click', toggleDarkMode);
+window.addEventListener('scroll', scrollDetector);
 
 // Au chargement de la page.
 if(localStorage.savedGrid) {
@@ -127,4 +129,16 @@ function cleanAll ()
 function toggleDarkMode () {
 	document.body.classList.toggle("dark-mode");
 	localStorage.setItem("favTheme", favTheme);
+}
+
+function scrollDetector () {
+	console.log('height :', window.innerHeight);
+	console.log('yOffset :', window.pageYOffset);
+	if(window.pageYOffset >= 10) {
+		topButton.style.opacity = 1;
+		topButton.style.visibility = 'visible';
+	} else {
+		topButton.style.opacity = 0;
+		topButton.style.visibility = 'hidden';
+	}
 }
