@@ -132,8 +132,6 @@ function toggleDarkMode () {
 }
 
 function scrollDetector () {
-	console.log('height :', window.innerHeight);
-	console.log('yOffset :', window.pageYOffset);
 	if(window.pageYOffset >= 10) {
 		topButton.style.opacity = 1;
 		topButton.style.visibility = 'visible';
